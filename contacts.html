@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/57e9df9983.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/images/faticon/favicon-16x16.png">
+    <title>HusBrand | Contactos</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+         /*Heading*/
+         .background{
+            background: rgb(238, 91, 23);
+            background-size: cover;
+            height: calc(40vh - 70px);
+        }
+        .heading{
+            margin: 0 80px;
+            padding: 50px 0;
+            text-align: center;
+            justify-content: center;
+            font-size: 400;
+            font-family: 'Hellix', sans-serif;
+        }
+        mark{
+            background-color: #ffe922;
+            border: 30px;
+        }
+        h1{
+            font-size: 80px;
+        }
+        /*Navegation*/
+        nav{
+            background-color: #ffe922;
+            width: 100%;
+            height: 80px;
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color: #000;
+            font-size: 17px;
+            font-family: 'Hellix', sans-serif;
+            padding: 7px 13px;
+            border: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .logo{
+            display: inline-block;
+            vertical-align: top;
+            width: 250px;
+            height: 50px;
+            margin-right: 50px;
+            margin-top: 15px;
+            padding: 0 30px;
+        }
+        a.active {
+            background-color: #fff;
+            transition: .5s;
+        }
+        /*EMAILS*/
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        form h4{
+            color: #ffe922;
+            font-weight: 800;
+            font-family: 'Hellix', sans-serif;
+            margin-bottom: 20px;
+        }
+        form input, form textarea{
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background-color: #f0f0f0;
+            font-size: 16px;
+            font-family: 'Hellix', sans-serif;
+        }
+        form button{
+            padding: 15px;
+            background-color: #ffe922;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            font-family: 'Hellix', sans-serif;
+            width: 150;
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+        /*MENUS*/
+        .checkbtn{
+            font-size: 30px;
+            color:#000;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        /*Footer*/
+        footer{
+            background-color: #ffe922;
+            height: calc(55vh - 80px);
+            font-family: 'Hellix', sans-serif;
+            padding: 40px;
+        }
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        h3{
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+
+        .p_footer1{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .socials{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+        .socials li{
+            margin: 0 10px;
+        }
+        .socials a{
+            text-decoration: none;
+            color: #000;
+        }
+        .socials a i{
+            font-size: 1.1rem;
+        }
+        /*Responsivity*/
+        @media (max-width: 952px) {
+            .logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 858px){
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #ffe922;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        @media (max-width: 768px){
+            h1{
+                font-size: 50px;
+            }
+        }
+        @media (min-width: 320px){
+            .logo{
+            display: inline-block;
+            vertical-align: top;
+            width: 200px;
+            height: 30px;
+            margin-right: 50px;
+            margin-top: 25px;
+            padding: 0 30px;
+            }
+            form h4{
+            color: #ffe922;
+            font-weight: 800;
+            font-family: 'Hellix', sans-serif;
+            margin-bottom: 10px;
+            }
+            form{
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 70%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        form input, form textarea{
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background-color: #f0f0f0;
+            font-size: 11px;
+            font-family: 'Hellix', sans-serif;
+        }
+        form button{
+            padding: 15px;
+            background-color: #ffe922;
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            font-family: 'Hellix', sans-serif;
+            width: 150;
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+        h1{
+            font-size: 30px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <img src="/images/HusBrand Logo 2.png" alt="" class="logo">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/error404.html">Loja</a></li>
+                <li><a href="/about.html">Sobre</a></li>
+                <li><a class="active" href="/contacts.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <section class="background">
+            <div class="heading">
+        <h1><mark>CONTACTOS</mark></h1>
+
+ </header>
+    <section class="form">
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h4>DÁ LÁ UM TOQUE!</h4>
+                <input type="text" id="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu Melhor Email" required>
+                <input type="text" id="number" placeholder="Seu Whatsapp/Telefone" required>
+                <input type="text" id="name" placeholder="Assunto" required>
+                <textarea id="message" rows="4" placeholder="Em que posso ser-lhe útli?"></textarea>
+                <button type="submit">Mandar</button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/stmp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "nuelpiarras@gmail.com",
+                    Password : "Dasilvaa@99",
+                    To : "nuelsilvapro@gmail.com",
+                    From : document.getElementByID("email").value,
+                    Subject : "NOVA MENSAGEM DO BLOG HUSBRAND",
+                    Body: "",
+                }).then(
+                    message => alert(Message)
+                );
+            }
+        </script>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <h3>HusBrand</h3>
+            <p class="p_footer">Blog Marido de Angola</p>
+            <ul class="socials">
+                <li><a href="www.facebook.com/husbrnd/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="www.instagram.com/husbrnd/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        </div>
+        <div class="footer-botton">
+            <p class="p_footer1">2022 &copy; HusBrand. Feito em Angola</p>
+        </div>
+    </footer>
+</body>
+</html>
